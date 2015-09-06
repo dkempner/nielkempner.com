@@ -2,11 +2,71 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style type="text/css" media="screen">
+    .background {}
+    
+    .flex-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .frozen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .box {
+        background-color: white;
+        height: 25%;
+        width: 25%;
+        opacity: .3;
+    }
+    
+    .opacity-reset {
+        opacity: 1;
+    }
+    
+    .center-text {
+        text-align: center;
+    }
+
+	.white-text{
+		color: white;
+	}
+
+    </style>
     <title>da.nielkempner.com</title>
 </head>
 
-<body>
-    <p>Testing</p>
+<body class="background" style="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h1 class="center-text white-text">Content</h1>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var prefix = 'url(images/';
+        var suffix = '.jpg)no-repeat center center fixed';
+        var choices = ['road', 'beach'];
+        var length = choices.length - 1;
+        var random = _.random(length);
+        var fullStyle = prefix + choices[random] + suffix;
+        $('.background').css('background', fullStyle);
+        $('.background').css('background-size', 'cover');
+    });
+    </script>
 </body>
 
 </html>
