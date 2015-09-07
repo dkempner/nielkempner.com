@@ -50,7 +50,7 @@
     
     .white-background {
         background-color: white;
-        opacity: .5;
+        opacity: .6;
     }
     
     .side-pads {
@@ -90,7 +90,7 @@
     $(function() {
         var prefix = 'url(images/';
         var suffix = '.jpg)';
-        var choices = ['road', 'beach'];
+        var choices = ['beach', 'road-square', 'shore', 'theoretical', 'jesus'];
         var length = choices.length - 1;
         var random = _.random(length);
         var fullStyle = prefix + choices[random] + suffix;
