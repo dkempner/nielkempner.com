@@ -39,44 +39,43 @@
     .left-text {
         text-align: left;
     }
-
-    .right-text{
-    	text-align: right;
+    
+    .right-text {
+        text-align: right;
     }
     
     .white-text {
         color: white;
     }
-
-	.white-background{
-		background-color: white;
-		opacity: .5;
-	}
-
-	.side-pads{
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-
+    
+    .white-background {
+        background-color: white;
+        opacity: .5;
+    }
+    
+    .side-pads {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     </style>
     <title>da.nielkempner.com</title>
 </head>
+
 <body class="background" style="">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4">
                 <div class="">
-
                 </div>
             </div>
             <div class="col-sm-4">
             </div>
             <div class="col-sm-4">
-                                <h1 class="right-text white-text">
-	                	<a class="" href="https://github.com/dkempner">
-	                       <i class="fa fa-4x fa-github white-background side-pads"></i>
-	                    </a>
-                	</h1>
+                <h1 class="right-text white-text">
+                	<a class="" href="https://github.com/dkempner">
+                       <i class="fa fa-4x fa-github white-background side-pads"></i>
+                    </a>
+               	</h1>
             </div>
         </div>
     </div>
@@ -92,6 +91,9 @@
         var fullStyle = prefix + choices[random] + suffix;
         $('.background').css('background', fullStyle);
         $('.background').css('background-size', 'cover');
+        $('.background').css('-webkit-background-size', 'cover');
+        $('.background').css('-moz-background-size', 'cover');
+        $('.background').css('-o-background-size', 'cover');
     });
     </script>
 </body>
