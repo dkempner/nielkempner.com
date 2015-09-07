@@ -84,12 +84,15 @@
     <script type="text/javascript">
     $(function() {
         var prefix = 'url(images/';
-        var suffix = '.jpg)no-repeat center center fixed';
+        var suffix = '.jpg)';
         var choices = ['road', 'beach'];
         var length = choices.length - 1;
         var random = _.random(length);
         var fullStyle = prefix + choices[random] + suffix;
-        $('.background').css('background', fullStyle);
+        $('.background').css('background-image', fullStyle);
+        $('.background').css('background-repeat', 'no-repeat');
+        $('.background').css('background-position', 'center-center');
+        $('.background').css('background-attachment', 'fixed');
         $('.background').css('background-size', 'cover');
         $('.background').css('-webkit-background-size', 'cover');
         $('.background').css('-moz-background-size', 'cover');
